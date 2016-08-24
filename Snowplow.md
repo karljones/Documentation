@@ -6,6 +6,26 @@ Home page:
 
 http://snowplowanalytics.com/
 
+## Overview
+
+Stages of the Snowplow process:
+
+* Tracking
+* Collection
+* Enrichment
+* 
+### Tracking stage
+
+...
+
+### Collection stage
+
+...
+
+### Enrichment stage
+
+...
+
 ## Integrating Javascript tags onto your website
 
 See:
