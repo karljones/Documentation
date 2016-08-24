@@ -6,14 +6,20 @@ Home page:
 
 http://snowplowanalytics.com/
 
-## Overview
+## Overview of the Snowplow process
 
 Stages of the Snowplow process:
 
 * Tracking
 * Collection
 * Enrichment
-* 
+ 
+## Setting up Snowplow
+
+See:
+
+https://github.com/snowplow/snowplow/wiki/Setting-up-Snowplow
+
 ### Tracking stage
 
 ...
