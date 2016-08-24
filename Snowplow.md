@@ -59,15 +59,49 @@ https://github.com/snowplow/snowplow/wiki/Setting-up-a-Tracker
 
 This document focuses on the JavaScript Tracker.
 
+The JavaScript Tracker appears in a script tag in the head section of a web page.
+
+Example:
+
+<pre>
+<!-- Snowplow starts plowing -->
+   <script type="text/javascript">
+
+       ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+           p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+           };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+           n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","{{  theme_asset( '/static/js/snowplow/sp.js' ) }}","snowplow"));
+
+       window.snowplow('newTracker', 'co', 'd1epsz32winqbo.cloudfront.net', { // Initialise a tracker
+           appId: 'Unique_string_to_identify_application', // Application ID. 
+           platform: 'web'
+       });
+       window.snowplow('enableActivityTracking', 30, 30); // Ping every 30 seconds after 30 seconds
+       window.snowplow('enableLinkClickTracking');
+	   
+	   window.snowplow('trackPageView');
+			   
+		window.snowplow('trackUnstructEvent', {
+			schema: 'iglu:com.acme_company/viewed_product/jsonschema/2-0-0',
+			data: {
+				productId: 'ASO01043',
+				category: 'Dresses',
+				brand: 'ACME',
+				returning: true,
+				price: 49.95,
+				sizes: ['xs', 's', 'l', 'xl', 'xxl'],
+				availableSince: new Date(2013,3,7)
+			}
+		});
+
+   </script>
+<!-- Snowplow stops plowing -->
+</pre>
+
 See:
-https://github.com/snowplow/snowplow/wiki/javascript-tracker-setup
 
-#### Integrating Javascript tags into website
-
-...
-
-See:
-Integrating Javascript tags onto your website
+* https://github.com/snowplow/snowplow/wiki/javascript-tracker-setup
+* Integrating Javascript tags onto your website
 
 ### Enrichment stage
 
