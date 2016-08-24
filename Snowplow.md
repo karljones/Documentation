@@ -62,9 +62,12 @@ This document focuses on the JavaScript Tracker.
 See:
 https://github.com/snowplow/snowplow/wiki/javascript-tracker-setup
 
-### Collection stage
+#### Integrating Javascript tags into website
 
 ...
+
+See:
+Integrating Javascript tags onto your website
 
 ### Enrichment stage
 
