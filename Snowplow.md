@@ -31,8 +31,36 @@ https://github.com/snowplow/snowplow/wiki/Setting-up-a-collector
 
 Snowplow Trackers generate event-data and send that data to Snowplow Collectors to log to S3.
 
+Trackers are available for a variety of environments:
+
+* Tracker	Description	Status
+* ActionScript3 Tracker
+* Android Tracker
+* Arduino Tracker
+* Golang Tracker
+* iOS Tracker
+* Java Tracker
+* JavaScript Tracker
+* Lua Tracker
+* .NET Tracker
+* Node.js Tracker
+* PHP Tracker
+* Python Tracker
+* Pixel Tracker
+* Ruby Tracker
+* Scala Tracker
+* Unity Tracker
+* Golang Tracker
+
 See:
 https://github.com/snowplow/snowplow/wiki/Setting-up-a-Tracker
+
+#### JavaScript Tracker
+
+This document focuses on the JavaScript Tracker.
+
+See:
+https://github.com/snowplow/snowplow/wiki/javascript-tracker-setup
 
 ### Collection stage
 
