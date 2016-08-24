@@ -19,14 +19,20 @@ Stages of the Snowplow process:
 
 See:
 https://github.com/snowplow/snowplow/wiki/Setting-up-Snowplow
- 
-## Set up Snowplow Tracker
 
-...
+### Set up Snowplow Collector
 
-### Tracking stage
+A Snowplow Collector receives (collects) data sent by a Tracker.
 
-...
+See:
+https://github.com/snowplow/snowplow/wiki/Setting-up-a-collector
+
+### Set up Snowplow Tracker
+
+Snowplow Trackers generate event-data and send that data to Snowplow Collectors to log to S3.
+
+See:
+https://github.com/snowplow/snowplow/wiki/Setting-up-a-Tracker
 
 ### Collection stage
 
@@ -39,5 +45,4 @@ https://github.com/snowplow/snowplow/wiki/Setting-up-Snowplow
 ## Integrating Javascript tags onto your website
 
 See:
-
 https://github.com/snowplow/snowplow/wiki/integrating-javascript-tags-onto-your-website
