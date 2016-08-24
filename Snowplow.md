@@ -71,7 +71,58 @@ Integrating Javascript tags onto your website
 
 ### Enrichment stage
 
-...
+The enrichment stage "enriches" data in the S3 log files.
+
+Generally, schema reference looks like this:
+
+<pre>
+iglu:vendor_name/event_name/jsonschema/2-0-0
+---- ----------- ---------- ---------- -----
+  |        |          |          |       |- schema version (model-revision-addition)
+  |        |          |          |- schema format
+  |        |          |- event name
+  |        |- vendor of the event
+  |- schema methodology
+</pre>
+
+On the other hand, the JSON schema describing the event will look like:
+
+<pre>
+{
+    "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+    "description": "Schema for event_name",
+    "self": {
+        "vendor": "vendor_name",
+        "name": "event_name",
+        "format": "jsonschema",
+        "version": "2-0-0"
+    },
+    "type": "object",
+    "properties": {
+        "productId": {
+            "type": "string"
+        },
+        "category": {
+            "type": "string"
+        },
+        ...
+    },
+    "minProperties":<<min number>>,
+    "required": [<<list of required properties>>],
+    "additionalProperties": <<false/true>>
+}
+</pre>
+
+The important part here is the self section:
+
+<pre>
+"self": {
+        "vendor": "vendor_name",
+        "name": "event_name",
+        "format": "jsonschema",
+        "version": "2-0-0"
+}
+</pre>
 
 ## Integrating Javascript tags onto your website
 
