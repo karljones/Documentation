@@ -10,15 +10,19 @@ http://snowplowanalytics.com/
 
 Stages of the Snowplow process:
 
-* Tracking
-* Collection
-* Enrichment
- 
-## Setting up Snowplow
+* Set up a Snowplow Tracker and/or Setup a Third-Party Webhook
+* Set up a Snowplow Collector
+* Set up Enrich
+* Set up alternative data stores (e.g. Redshift, PostgreSQL)
+* Data modeling in Redshift
+* Analyze data
 
 See:
-
 https://github.com/snowplow/snowplow/wiki/Setting-up-Snowplow
+ 
+## Set up Snowplow Tracker
+
+...
 
 ### Tracking stage
 
